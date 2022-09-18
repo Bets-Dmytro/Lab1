@@ -9,7 +9,7 @@ public class Main {
         double sum = 0;
         int C = 2;
         double i, j;
-        double a = 2, n = 7, b = 1, m = 12;
+        double a = 2, n = 7, b = 1, m = 48;
 
         for (i = a; i < n; i++)
             for (j = b; j < m; j++) {
