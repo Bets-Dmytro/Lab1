@@ -9,14 +9,18 @@ public class Main {
         double sum = 0;
         int C = 2;
         double i, j;
-        double a = 2, n = 7, b = 1, m = 12;
+        double a = 3, n = 9, b = 5, m = 12;
 
-        for (i = a; i < n; i++)
-            for (j = b; j < m; j++) {
-                if (i == C) continue;
-
-                sum += (i + j) / (i - C);
+        if (a <= C) {
+            System.out.println("Division by zero");
+        }
+        else {
+            for (i = a; i < n; i++) {
+                for (j = b; j < m; j++) {
+                    sum += (i + j) / (i - C);
+                }
             }
-        System.out.println(sum);
+            System.out.println(sum);
+        }
     }
 }
