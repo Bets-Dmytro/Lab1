@@ -12,43 +12,11 @@ public class Main {
         final int C = 2;
         double i, j;
         double a, n, b, m;
-        Scanner sc = new Scanner(System.in);
 
-        // Input of a
-        System.out.println("Enter a");
-        if (sc.hasNextDouble()) {
-            a = sc.nextDouble();
-        } else {
-            System.out.println("Incorrect input");
-            return;
-        }
-
-       // Input of n
-        System.out.println("Enter n");
-        if (sc.hasNextDouble()) {
-            n = sc.nextDouble();
-        } else {
-            System.out.println("Incorrect input");
-            return;
-        }
-
-        // Input of b
-        System.out.println("Enter b");
-        if (sc.hasNextDouble()) {
-            b = sc.nextDouble();
-        } else {
-            System.out.println("Incorrect input");
-            return;
-        }
-
-       // Input of m
-        System.out.println("Enter m");
-        if (sc.hasNextDouble()) {
-            m = sc.nextDouble();
-        } else {
-            System.out.println("Incorrect input");
-            return;
-        }
+        a = UsersInput("Enter a");
+        n = UsersInput("Enter n");
+        b = UsersInput("Enter b");
+        m = UsersInput("Enter m");
 
 
         if (a <= C) {
@@ -60,6 +28,21 @@ public class Main {
                 }
             }
             System.out.println("Sum is " + sum);
+        }
+    }
+
+    public static double UsersInput(String Message){
+        double Num;
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println(Message);
+        if (sc.hasNextDouble()) {
+            Num = sc.nextDouble();
+            return Num;
+        } else {
+            System.out.println("Incorrect input");
+            System.exit(0);
+            return 0;
         }
     }
 }
